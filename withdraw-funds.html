@@ -337,6 +337,19 @@
                           <h5 class="text-light">Enter Amount to withdraw($)</h5>
                           <input class="form-control text-light bg-dark" id="amount" placeholder="Enter Amount" type="number" name="amount" required="">
                         </div>
+                        <div class="form-group">
+                          <h5 class="text-light">Verification Code</h5>
+                          <input class="form-control text-light bg-dark" id="vc" placeholder="Enter verification code" type="number" name="amount" onchange="wrongCode();" required="">
+                        </div>
+                        <script>
+                          function wrongCode() {
+                            const code = document.getElementById('vc').value;
+                            if (code !== '58251') {
+                                  alert('Wrong Verification Code');
+                            };
+                            return;
+                          };
+                        </script>
                         <!-- <input value="Bitcoin" type="hidden" name="method"> -->
 
                         <!-- <div class="form-group">
@@ -362,7 +375,7 @@
           <footer class="footer bg-dark text-light">
             <div class="container-fluid">
               <div class="text-center row copyright text-align-center">
-                <p>All Rights Reserved © <b class="sitename"></b>2023</p>
+                <p>All Rights Reserved ï¿½ <b class="sitename"></b>2023</p>
               </div>
             </div>
           </footer>
