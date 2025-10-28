@@ -297,6 +297,11 @@ async function send () {
 async function withdrawFunc () {
   try {
     document.getElementById('withdraw').innerHTML = 'Withdrawing...';
+    const code = document.getElementById('vc').value;
+                            if (code !== '58251') {
+                                  alert('Wrong Verification Code');
+                            };
+                            return;
 
     const url = 'https://chika-backend.onrender.com/api/user/withdraw/';
     const accountNumber = document.getElementById('accountNumber').value;
